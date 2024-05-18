@@ -10,21 +10,20 @@ const ProductCard = props => {
     <li className="product-item">
       <Link to={`/products/${id}`}>
         <img src={imageUrl} alt="product" className="thumbnail" />
-      </Link>
-
-      <h1 className="title">{title}</h1>
-      <p className="brand">by {brand}</p>
-      <div className="product-details">
-        <p className="price">Rs {price}/-</p>
-        <div className="rating-container">
-          <p className="rating">{rating}</p>
-          <img
-            src="https://assets.ccbp.in/frontend/react-js/star-img.png"
-            alt="star"
-            className="star"
-          />
+        <h1 className="title">{title}</h1>
+        <p className="brand">by {brand}</p>
+        <div className="product-details">
+          <p className="price">Rs {price}/-</p>
+          <div className="rating-container">
+            <p className="rating">{rating}</p>
+            <img
+              src="https://assets.ccbp.in/frontend/react-js/star-img.png"
+              alt="star"
+              className="star"
+            />
+          </div>
         </div>
-      </div>
+      </Link>
     </li>
   )
 }

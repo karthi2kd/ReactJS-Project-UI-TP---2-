@@ -1,8 +1,8 @@
 // Write your code here
-// Write your code here
+
 import {Component} from 'react'
 import {Link} from 'react-router-dom'
-import {Loader} from 'react-loader-spinner'
+import Loader from 'react-loader-spinner'
 import {BsDashSquare, BsPlusSquare} from 'react-icons/bs'
 import Cookies from 'js-cookie'
 
@@ -42,6 +42,9 @@ class ProductItemDetails extends Component {
   })
 
   getDetails = async () => {
+    this.setState({
+      apiStatus: apiStatusConstants.inProgress,
+    })
     const {match} = this.props
     const {params} = match
     const {id} = params
